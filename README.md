@@ -9,6 +9,8 @@ ridgeline.jl is a package for generating ridgeline (a.k.a. Joy) Plots in Julia. 
 ## Quick Guide
 Once installed, a default ridgeline plot can be made usuing `ridgeline()`
 
+![]("misc/ridgydidge.png")
+
 ## Arguments
 
 `data` : An array of values that are to be plotted. Each column represents a categorical variable. The default array is a 100x3 randn distribution.
