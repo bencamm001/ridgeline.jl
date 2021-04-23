@@ -1,5 +1,6 @@
 module Ridgeline
 
+using Pkg
 
     try
         using KernelDensity
