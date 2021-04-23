@@ -1,4 +1,4 @@
-# ridgeline.jl
+# Ridgeline.jl
 Ridgeline (Joy) plotting for Julia
 
 
