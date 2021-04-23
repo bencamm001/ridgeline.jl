@@ -6,8 +6,15 @@ Ridgeline (Joy) plotting for Julia
 
 ridgeline.jl is a package for generating ridgeline (a.k.a. Joy) Plots in Julia. Works best with `pyplot()` but also works with `gr()`
 
+## Quick Install
+`
+using Pkg
+Pkg.add(PackageSpec(url="https://github.com/bencamm001/ridgeline.jl.git", rev="main"))
+using Ridgeline
+`
+
 ## Quick Guide
-Once installed, a default ridgeline plot can be made usuing `ridgeline()`
+Once installed, a default ridgeline plot can be made usuing `Ridgeline.ridgeline()`
 
 ![](misc/ridgydidgy.png)
 
