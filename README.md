@@ -8,8 +8,8 @@ ridgeline.jl is a package for generating ridgeline (a.k.a. Joy) Plots in Julia. 
 
 ## Quick Install
 `
-using Pkg \n
-Pkg.add(PackageSpec(url="https://github.com/bencamm001/ridgeline.jl.git", rev="main")) \n
+using Pkg
+Pkg.add(PackageSpec(url="https://github.com/bencamm001/ridgeline.jl.git", rev="main"))
 using Ridgeline
 `
 
