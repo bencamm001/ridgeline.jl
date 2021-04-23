@@ -9,7 +9,7 @@ ridgeline.jl is a package for generating ridgeline (a.k.a. Joy) Plots in Julia. 
 ## Quick Guide
 Once installed, a default ridgeline plot can be made usuing `ridgeline()`
 
-![]("misc/ridgydidge.png")
+![]("misc/ridgydidgy.png")
 
 ## Arguments
 
@@ -44,8 +44,3 @@ Once installed, a default ridgeline plot can be made usuing `ridgeline()`
 `ridgeoutline` : A String to change the color of the outline of each ridgeline. Default is "white".
 
 `ridgelw` : A Float64 to change the line weight of the outline of each ridgeline. Default is 2.0.
-
-           
- 
- 
- 
