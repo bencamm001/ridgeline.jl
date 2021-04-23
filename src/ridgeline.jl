@@ -16,7 +16,7 @@ module Ridgeline
     ridgeline = function(;  data::Array = ["default"],
                             ylabels::Array = ["default"],
                             colors::Array = ["default"],
-                            spacer::Float64 = 0.5,
+                            spacer::Float64 = 0.2,
                             riser::Float64 = 0.001,
                             plottitle::String = "Ridgydidgy Plot",
                             plotxlab::String = "name_me",
@@ -60,11 +60,11 @@ module Ridgeline
 
         #default or argument for ylabels
         if ylabels[1] == "default"
-            ylabels = fill("AAA", size(data,2))
+            ylabels = fill(" A ", size(data,2))
         end
 
         #adjust aesthetics of plot
-        Plots.plot(yticks = (collect((size(dense,2) - 1):-1:0) .* (spacer), ylabels))
+        h1 = Plots.plot(yticks = (collect((size(dense,2) - 1):-1:0) .* (spacer), ylabels))
         Plots.plot!(grid = false)
         Plots.plot!(title = plottitle)
         Plots.plot!(xlab = plotxlab)
@@ -83,6 +83,7 @@ module Ridgeline
                         linecolor = ridgeoutline, lw = ridgelw, fillcolor = colors[i]))
 
         end
-    end
+        return(h1)
 
+    end
 end
