@@ -88,7 +88,7 @@ using Pkg
         Plots.plot!(titlefontsize = titlesize)
         Plots.plot!(xlim = [minimum(xlimits), maximum(xlimits)])
         Plots.plot!(ylim = [minimum(ylimits), maximum(ylimits)])
-        Plots.hline!((collect((size(dense,1) - 1):-1:0) .* (spacer)), color = hlinecolor, lw = hlw, label = "", alpha = halpha)
+        Plots.hline!([(collect((size(dense,1) - 1):-1:0)) .* (spacer)], color = hlinecolor, lw = hlw, label = "", alpha = halpha)
 
         #plotting each curve
         for i in size(dense, 1):-1:1
