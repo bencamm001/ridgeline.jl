@@ -15,13 +15,13 @@ using Ridgeline
 
 
 ## Quick Guide
-Once installed, a default ridgeline plot can be made usuing `Ridgeline.ridgeline()`
+Once installed, a default ridgeline plot can be made using `Ridgeline.ridgeline()`
 
 ![](misc/ridgydidgy.png)
 
 ## Arguments
 
-`data` : An array of values that are to be plotted. Each column represents a categorical variable. The default array is a 100x3 randn distribution.
+`data` : An array of arrays of values that are to be plotted. Each element represents a categorical variable. The default array is a 3 element randn distribution of 100 values.
 
 `ylabels` : An array of categorical labels for each column of data. The default is `["AAA", "AAA", "AAA"]`. *please note:* each variable in the array needs a single space each side of the name as for some reason the first and last characters are removed.
 
