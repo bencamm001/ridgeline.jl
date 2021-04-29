@@ -21,6 +21,7 @@ using Pkg
                             riser::Float64 = 0.001,
                             plottitle::String = "Ridgydidgy Plot",
                             plotxlab::String = "name_me",
+                            plotylab::String = "name_me",
                             xlabsize::Int64 = 10,
                             ylabsize::Int64 = 10,
                             titlesize::Int64 = 20,
@@ -77,10 +78,11 @@ using Pkg
         end
 
         #adjust aesthetics of plot
-        h1 = Plots.plot(yticks = (collect((size(dense,1) - 1):-1:0) .* (spacer), ylabels))
+        h1 = Plots.plot(yticks = (collect((size(dense,1) - 1):-1:0) .* (spacer), reverse(ylabels)))
         Plots.plot!(grid = false)
         Plots.plot!(title = plottitle)
         Plots.plot!(xlab = plotxlab)
+        Plots.plot!(ylab = plotylab)
         Plots.plot!(xtickfontsize = xlabsize)
         Plots.plot!(ytickfontsize = ylabsize)
         Plots.plot!(titlefontsize = titlesize)
