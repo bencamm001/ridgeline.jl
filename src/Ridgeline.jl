@@ -33,8 +33,9 @@ using Pkg
                             ridgelw::Float64 = 2.0,
                             scaling::Bool = false,
                             numbers::Bool = false,
-                            xtext::Float64 = 0,
-                            ytext::Float64 = 0
+                            xtext::Float64 = 0.0,
+                            ytext::Float64 = 0.0,
+                            textsize::Int64 = 5
                             )
 
         #default or argument for data
