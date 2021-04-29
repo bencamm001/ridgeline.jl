@@ -30,7 +30,11 @@ using Pkg
                             halpha::Float64 = 0.8,
                             ridgealpha::Float64 = 0.9,
                             ridgeoutline::String = "white",
-                            ridgelw::Float64 = 2.0
+                            ridgelw::Float64 = 2.0,
+                            scaling::Bool = false,
+                            numbers::Bool = false,
+                            xtext::Float64 = 0
+                            ytext::Float64 = 0
                             )
 
         #default or argument for data
@@ -42,14 +46,22 @@ using Pkg
         dense = Any[]
         xs = Any[]
 
+        #scaling to show relavtive densities
+        if scaling == true
+            scaling = length.(data) ./ maximum(length.(data))
+        else
+            scaling = ones(length(data))
+        end
+
         #make density plot line data for plotting
         for i in 1:size(data, 1)
 
             temp = kde(data[i])
-            push!(dense, [temp.density .+ ((((i - 1) * spacer) .+ riser))])
+            push!(dense, [(temp.density .* scaling[i]) .+ ((((i - 1) * spacer) .+ riser))])
             push!(xs, [temp.x])
 
         end
+
 
 
 
@@ -89,6 +101,13 @@ using Pkg
         Plots.plot!(xlim = [minimum(xlimits), maximum(xlimits)])
         Plots.plot!(ylim = [minimum(ylimits), maximum(ylimits)])
         Plots.hline!([(collect((size(dense,1) - 1):-1:0)) .* (spacer)], color = hlinecolor, lw = hlw, label = "", alpha = halpha)
+
+        #add annotation for n for each line
+        if numbers == true
+            annotate!(maximum(xlimits) + xtext, [(collect((size(dense,1) - 1):-1:0)) .* (spacer) .+ ytext], [string.(length.(ridgedata))])
+        end
+
+
 
         #plotting each curve
         for i in size(dense, 1):-1:1
