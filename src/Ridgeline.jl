@@ -33,7 +33,7 @@ using Pkg
                             ridgelw::Float64 = 2.0,
                             scaling::Bool = false,
                             numbers::Bool = false,
-                            xtext::Float64 = 0
+                            xtext::Float64 = 0,
                             ytext::Float64 = 0
                             )
 
