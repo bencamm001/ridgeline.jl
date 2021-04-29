@@ -105,7 +105,7 @@ using Pkg
 
         #add annotation for n for each line
         if numbers == true
-            annotate!(maximum(xlimits) + xtext, [(collect((size(dense,1) - 1):-1:0)) .* (spacer) .+ ytext], [string.(length.(data))])
+            annotate!(maximum(xlimits) + xtext, [(collect((size(dense,1) - 1):-1:0)) .* (spacer) .+ ytext], string.(length.(data)))
         end
 
 
