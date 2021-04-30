@@ -33,9 +33,10 @@ using Pkg
                             ridgelw::Float64 = 2.0,
                             scaling::Bool = false,
                             numbers::Bool = false,
+                            revnumbers::Bool = false,
                             xtext::Float64 = 0.0,
                             ytext::Float64 = 0.0,
-                            textsize::Int64 = 5
+                            annosize::Int64 = 5
                             )
 
         #default or argument for data
@@ -104,8 +105,14 @@ using Pkg
         Plots.hline!([(collect((size(dense,1) - 1):-1:0)) .* (spacer)], color = hlinecolor, lw = hlw, label = "", alpha = halpha)
 
         #add annotation for n for each line
+        if revnumbers == true
+            anno_numbers = "n = " .* reverse(string.(length.(data)))
+        else
+            anno_numbers = "n = " .* string.(length.(data))
+        end
+
         if numbers == true
-            annotate!(maximum(xlimits) + xtext, [(collect((size(dense,1) - 1):-1:0)) .* (spacer) .+ ytext], string.(length.(data)))
+            annotate!(maximum(xlimits) + xtext, (collect((size(dense,1) - 1):-1:0)) .* (spacer) .+ ytext, anno_numbers, annosize)
         end
 
 
