@@ -52,3 +52,15 @@ Once installed, a default ridgeline plot can be made using `Ridgeline.ridgeline(
 `ridgeoutline` : A String to change the color of the outline of each ridgeline. Default is "white".
 
 `ridgelw` : A Float64 to change the line weight of the outline of each ridgeline. Default is 2.0.
+
+`scaling` : A Bool to determine whether the heights of each distribution should be scaled according to the relative numbers of each class. Default is false.
+
+`numbers` : A Bool to determine whether the number of observations in each class should be annotated on each line. Default is false.
+
+`revnumbers` : A Bool to reverse the order of annotated numbers. Default is false.
+
+`xtext` : A Float64 to adjust the x-axis position of annotated numbers. Default is 0.0.
+
+`ytext` : A Flaot64 to adjust the y-axis position of annotated numbers. Default is 0.0.
+
+`annosize` : An Int64 to change the size of annotated numbers. Default is 5.
