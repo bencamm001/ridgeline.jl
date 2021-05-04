@@ -64,3 +64,5 @@ Once installed, a default ridgeline plot can be made using `Ridgeline.ridgeline(
 `ytext` : A Flaot64 to adjust the y-axis position of annotated numbers. Default is 0.0.
 
 `annosize` : An Int64 to change the size of annotated numbers. Default is 5.
+
+`showplot` : A Bool to determine whether plot should be displayed. Default is true. If `showplot` is set to `false`, need to add a semi-colon at the end of `Ridgeline.ridgeline(showplot = false)`
