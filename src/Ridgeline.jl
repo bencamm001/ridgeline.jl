@@ -36,7 +36,8 @@ using Pkg
                             revnumbers::Bool = false,
                             xtext::Float64 = 0.0,
                             ytext::Float64 = 0.0,
-                            annosize::Int64 = 5
+                            annosize::Int64 = 5,
+                            showplot::Bool = true
                             )
 
         #default or argument for data
@@ -121,8 +122,15 @@ using Pkg
         for i in size(dense, 1):-1:1
 
             #add plots
-            display(Plots.plot!(xs[i], dense[i], fillrange = ((i - 1) * spacer), label = "", fillalpha = ridgealpha,
-                        linecolor = ridgeoutline, lw = ridgelw, fillcolor = ridgecolors[i]))
+            if showplot == true
+                display(Plots.plot!(xs[i], dense[i], fillrange = ((i - 1) * spacer), label = "", fillalpha = ridgealpha,
+                            linecolor = ridgeoutline, lw = ridgelw, fillcolor = ridgecolors[i]))
+            else
+                Plots.plot!(xs[i], dense[i], fillrange = ((i - 1) * spacer), label = "", fillalpha = ridgealpha,
+                            linecolor = ridgeoutline, lw = ridgelw, fillcolor = ridgecolors[i]);
+            end
+
+
 
         end
         return(h1)
