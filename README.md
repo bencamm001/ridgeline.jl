@@ -25,7 +25,7 @@ Once installed, a default ridgeline plot can be made using `Ridgeline.ridgeline(
 
 `ylabels` : An array of categorical labels for each column of data. The default is `["AAA", "AAA", "AAA"]`. *please note:* each variable in the array needs a single space each side of the name as for some reason the first and last characters are removed.
 
-`colors` : An array of colors for each ridgeline, can be either string or hex or Int64.
+`ridgecolors` : An array of colors for each ridgeline, can be either string or hex or Int64.
 
 `spacer` : A Float64 value that changes the spacing between each ridgeline. Value should be greater than 0, low values make the spacer between ridgelines smaller. Default is 0.5.
 
